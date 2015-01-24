@@ -17,7 +17,10 @@ public class PlayerInteraction : MonoBehaviour {
 	void Start () {
 		Screen.lockCursor = true;
 	}
-	
+
+	void Update () {
+	}
+
 	// Update is called once per frame
 	void FixedUpdate () {
 
@@ -37,14 +40,14 @@ public class PlayerInteraction : MonoBehaviour {
 				ableToInteract = true;
 			}
 		}
-		/*
+
 		//highlight crosshair to signal possible interaction
 		if (ableToInteract) {
 			ExecuteEvents.Execute(crossHair.gameObject, pointer, ExecuteEvents.pointerEnterHandler);
 		}
 		if (!ableToInteract) {
 			ExecuteEvents.Execute(crossHair.gameObject, pointer, ExecuteEvents.pointerExitHandler);		
-		}*/
+		}
 
 		//end update with disabling interaction
 		ableToInteract = false;
