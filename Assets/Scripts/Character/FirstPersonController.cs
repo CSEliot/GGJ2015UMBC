@@ -93,7 +93,6 @@ public class FirstPersonController : MonoBehaviour {
 		health.value = health.value - ((0.1f * Time.deltaTime) / 30.0f);
 		
 		clock = clock + Time.deltaTime;
-		Debug.Log (clock);
 
 		//suicide
 		if (Input.GetKeyDown("k") && isDead == false) {
