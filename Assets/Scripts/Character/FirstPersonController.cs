@@ -23,13 +23,15 @@ public class FirstPersonController : MonoBehaviour {
 	private Ray	ray;
 	private RaycastHit rayHitDown;
 	private bool isGrounded = true;
-	public float moveSpeed;
+	public float moveSpeed;    
 	public float totalJumpsAllowed;
 	public float totalJumpsMade;
 	private float floorInclineThreshold = 0.3f;
 
 	private bool runningToggle = false;
 	public bool canCheckForJump;
+
+	private bool isDead;
 
 	//ACTION STRINGS
 	//==================================================================
@@ -50,6 +52,8 @@ public class FirstPersonController : MonoBehaviour {
     public float healthModifier;
     public float jumpHeightModifier;
     public float armorModifier;
+
+	public GameObject cloneToCopyUponDeath;
 
     public bool isZoomed = false;
 
@@ -72,81 +76,94 @@ public class FirstPersonController : MonoBehaviour {
         totalJumpsMade = 0;
 		setControlStrings();
 		rotLeftRight = 0.0f;
+		isDead = false;
 	}
 
 
 	
 	// Update is called once per frame
-	void FixedUpdate () {
-
-				//player rotation
-				//left and right
-        
-				rotLeftRight = Input.GetAxis (Haim_str) * mouseSensetivity;
-				transform.Rotate (0, rotLeftRight, 0);
-				//up and down (with camera)
-				rotUpDown -= Input.GetAxis (Vaim_str) * mouseSensetivity;
-				rotUpDown = Mathf.Clamp (rotUpDown, -upDownRange, upDownRange);
-				newRotationAngle.x = rotUpDown;
-				newRotationAngle.y = startingCameraRotation.y;
-				newRotationAngle.z = startingCameraRotation.z;
-				transform.GetChild (0).transform.localRotation = Quaternion.Euler (newRotationAngle);
-
-
-				//Movement
-				//Running!!
-				if (Input.GetButtonDown (Dash_str)) {
-					runningToggle = !runningToggle;
-				}
-
-				//Jumping!!
-				if (totalJumpsMade < totalJumpsAllowed && Input.GetButtonDown (Jump_str)) {
-						totalJumpsMade += 1;
-						isGrounded = false;
-						canCheckForJump = false;
-            
-						rigidbody.velocity = new Vector3 (rigidbody.velocity.x, CalculateJumpVerticalSpeed (), rigidbody.velocity.z);
-
-						Invoke ("AllowJumpCheck", 0.1f);
-				}
-				if (true) {
-
-						//Gram being a massive jerk. DONT EVER ENABLE THIS. IM WARNING YOU
-						Vector3 targetVelocity;
-						targetVelocity = new Vector3 (Input.GetAxis (Strf_str), 0, Input.GetAxis (FWmv_str));
-						/*if (!GM._M.invertControls)
-								targetVelocity = new Vector3 (Input.GetAxis (Strf_str), 0, Input.GetAxis (FWmv_str));
-						else
-								targetVelocity = new Vector3 (-Input.GetAxis (Strf_str), 0, -Input.GetAxis (FWmv_str));
-						// THis too. WHYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY?
-						if (GM._M.noStrafe) {
-								targetVelocity.x = 0;
-						}*/
-						targetVelocity = transform.TransformDirection (targetVelocity);
-						targetVelocity *= moveSpeed;
-						// Apply a force that attempts to reach our target velocity
-						Vector3 velocity = rigidbody.velocity;
-						Vector3 velocityChange = (targetVelocity - velocity);
-
-						velocityChange.x = Mathf.Clamp (velocityChange.x, -maxVelocityChange, maxVelocityChange);
-						velocityChange.z = Mathf.Clamp (velocityChange.z, -maxVelocityChange, maxVelocityChange);
-						velocityChange.y = 0;
-
-						rigidbody.AddForce (velocityChange, ForceMode.VelocityChange);
-
-						// Jump
-						//Manager.say("Jumping action go. Jumps Made: " + totalJumpsMade + " Jumps Allowed: " + totalJumpsAllowed, "eliot");
-				}
-
-				rigidbody.AddForce (new Vector3 (0, -gravity * rigidbody.mass, 0));
-				// We apply gravity manually for more tuning control
+	void FixedUpdate () {			
+		//suicide
+		if (Input.GetKeyDown("k") && isDead == false) {
+			killPlayer();
+		}
+		if (isDead == false) {		
+			//player rotation
+			//left and right
+			rotLeftRight = Input.GetAxis (Haim_str) * mouseSensetivity;
+			transform.Rotate (0, rotLeftRight, 0);
+			//up and down (with camera)
+			rotUpDown -= Input.GetAxis (Vaim_str) * mouseSensetivity;
+			rotUpDown = Mathf.Clamp (rotUpDown, -upDownRange, upDownRange);
+			newRotationAngle.x = rotUpDown;
+			newRotationAngle.y = startingCameraRotation.y;
+			newRotationAngle.z = startingCameraRotation.z;
+			transform.GetChild (0).transform.localRotation = Quaternion.Euler (newRotationAngle);
 
 
+			//Movement
+			//Running!!
+			if (Input.GetButtonDown (Dash_str)) {
+				runningToggle = !runningToggle;
+			}
+
+			//Jumping!!
+			if (totalJumpsMade < totalJumpsAllowed && Input.GetButtonDown (Jump_str)) {
+				totalJumpsMade += 1;
+				isGrounded = false;
+				canCheckForJump = false;
+
+				rigidbody.velocity = new Vector3 (rigidbody.velocity.x, CalculateJumpVerticalSpeed (), rigidbody.velocity.z);
+
+				Invoke ("AllowJumpCheck", 0.1f);
+
+			}
+			if (true) {
+
+				//Gram being a massive jerk. DONT EVER ENABLE THIS. IM WARNING YOU
+				Vector3 targetVelocity;
+				targetVelocity = new Vector3 (Input.GetAxis (Strf_str), 0, Input.GetAxis (FWmv_str));
+				
+				targetVelocity = transform.TransformDirection (targetVelocity);
+				targetVelocity *= moveSpeed;
+				// Apply a force that attempts to reach our target velocity
+				Vector3 velocity = rigidbody.velocity;
+				Vector3 velocityChange = (targetVelocity - velocity);
+
+				velocityChange.x = Mathf.Clamp (velocityChange.x, -maxVelocityChange, maxVelocityChange);
+				velocityChange.z = Mathf.Clamp (velocityChange.z, -maxVelocityChange, maxVelocityChange);
+				velocityChange.y = 0;
+
+				rigidbody.AddForce (velocityChange, ForceMode.VelocityChange);
+
+				// Jump
+				//Manager.say("Jumping action go. Jumps Made: " + totalJumpsMade + " Jumps Allowed: " + totalJumpsAllowed, "eliot");
+			}
+
+			rigidbody.AddForce (new Vector3 (0, -gravity * rigidbody.mass, 0));
+			// We apply gravity manually for more tuning control
+		}
 	}  
+
 	private float CalculateJumpVerticalSpeed () {
 		// From the jump height and gravity we deduce the upwards speed 
 		// for the character to reach at the apex.
 		return Mathf.Sqrt(2 * (jumpHeight+jumpHeightModifier-weightModifier) * gravity);
+	}
+
+	public bool getIsDead(){
+		return isDead;
+	}
+
+	public void killPlayer(){
+		Debug.Log("SUICIDED!");
+		GameObject.Find ("DeathTracker").GetComponent<DeathTracker> ().increaseDeathCount ();
+		isDead = true;
+		Instantiate(cloneToCopyUponDeath, 
+		            GameObject.Find("SpawnPoint").transform.position, 
+		            GameObject.Find("SpawnPoint").transform.rotation
+		            );
+		gameObject.transform.GetChild(0).gameObject.SetActive(false);
 	}
 
 	private void setControlStrings(){
