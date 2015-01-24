@@ -77,7 +77,7 @@ Material:
       data:
         first:
           name: _WaveScale
-        second: .0702830181
+        second: .125997305
       data:
         first:
           name: _Highlight
@@ -109,12 +109,12 @@ Material:
         second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
-          name: _MainTex_ST
-        second: {r: 1, g: 1, b: 0, a: 0}
-      data:
-        first:
           name: _SpecColor
         second: {r: 0, g: 0, b: 0, a: .400000006}
+      data:
+        first:
+          name: _MainTex_ST
+        second: {r: 1, g: 1, b: 0, a: 0}
       data:
         first:
           name: _BumpMap_ST
@@ -126,7 +126,7 @@ Material:
       data:
         first:
           name: _horizonColor
-        second: {r: .165530786, g: .241492584, b: .381818175, a: 0}
+        second: {r: .0817474052, g: .161498293, b: .308823526, a: 0}
       data:
         first:
           name: _ColorControl_ST
