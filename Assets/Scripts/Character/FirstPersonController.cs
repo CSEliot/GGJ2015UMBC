@@ -37,6 +37,7 @@ public class FirstPersonController : MonoBehaviour {
 	public bool canCheckForJump;
 
 	private bool isDead;
+	private int messageEdited; //1 = not caring, 2 = not finished, 3 = finished
 
 	//ACTION STRINGS
 	//==================================================================
@@ -59,6 +60,7 @@ public class FirstPersonController : MonoBehaviour {
     public float armorModifier;
 
 	public GameObject cloneToCopyUponDeath;
+	public GameObject signToPlaceUponDeath;
 
     public bool isZoomed = false;
 
@@ -75,6 +77,7 @@ public class FirstPersonController : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		messageEdited = 1;
         canCheckForJump = true;
         newRotationAngle = new Vector3();
         startingCameraRotation = transform.GetChild(0).transform.localRotation.eulerAngles;
@@ -82,6 +85,8 @@ public class FirstPersonController : MonoBehaviour {
 		setControlStrings();
 		rotLeftRight = 0.0f;
 		isDead = false;
+		health.value = 1.0f;
+		gameObject.rigidbody.isKinematic = false;
 	}
 
 
@@ -155,6 +160,24 @@ public class FirstPersonController : MonoBehaviour {
 			rigidbody.AddForce (new Vector3 (0, -gravity * rigidbody.mass, 0));
 			// We apply gravity manually for more tuning control
 		}
+		if (messageEdited != 1) {
+			if(messageEdited == 3){
+				rezPlayer();
+				messageEdited = 1;
+			}else{
+				Debug.Log(GameObject.Find ("TypeCanvas").transform.GetChild (1).GetChild(2).GetComponent<Text>().text);
+				//wait till message is completely written.
+				if(Input.GetKeyDown("return")){
+					GameObject sign = Instantiate(signToPlaceUponDeath, gameObject.transform.position, gameObject.transform.rotation) as GameObject;
+					sign.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = 
+						GameObject.Find ("TypeCanvas").transform.GetChild (1).GetChild(2).GetComponent<Text>().text;
+					messageEdited = 3;
+					GameObject.Find ("TypeCanvas").transform.GetChild (1).GetChild(2).GetComponent<Text>().text = "";
+					GameObject.Find ("TypeCanvas").transform.GetChild (1).gameObject.SetActive (false);
+				}
+				//messageEdited = 3;
+			}
+		}
 	}  
 
 	private float CalculateJumpVerticalSpeed () {
@@ -171,6 +194,12 @@ public class FirstPersonController : MonoBehaviour {
 		Debug.Log("SUICIDED!");
 		GameObject.Find ("DeathTracker").GetComponent<DeathTracker> ().increaseDeathCount ();
 		isDead = true;
+		messageEdited = 2;
+		gameObject.rigidbody.isKinematic = true;
+		Screen.lockCursor = false;
+		GameObject.Find ("TypeCanvas").transform.GetChild (1).gameObject.SetActive (true);
+	}
+	private void rezPlayer(){
 		Instantiate(cloneToCopyUponDeath, 
 		            GameObject.Find("SpawnPoint").transform.position, 
 		            GameObject.Find("SpawnPoint").transform.rotation

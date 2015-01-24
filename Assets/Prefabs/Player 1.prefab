@@ -58,8 +58,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 156072}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -4.37113883e-08}
-  m_LocalPosition: {x: 4.38999987, y: 1.39999998, z: 7.73999977}
+  m_LocalRotation: {x: 0, y: .687616587, z: 0, w: -.72607398}
+  m_LocalPosition: {x: -.398148894, y: 1, z: -1.6891818}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 456070}
@@ -185,6 +185,7 @@ MonoBehaviour:
   jumpHeightModifier: 1
   armorModifier: 1
   cloneToCopyUponDeath: {fileID: 156072}
+  signToPlaceUponDeath: {fileID: 141670, guid: 1b4d24a04892c274b89934856d2d242d, type: 2}
   isZoomed: 0
 --- !u!114 &11456072
 MonoBehaviour:
