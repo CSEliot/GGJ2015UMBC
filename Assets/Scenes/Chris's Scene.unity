@@ -139,7 +139,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &435879082
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,7 +202,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &962074405
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,7 +286,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!1 &1264889728
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,126 +357,6 @@ Transform:
   m_LocalScale: {x: 2000, y: 0, z: 2000}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
---- !u!1 &1298122549
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100000, guid: 44b3febaf5142a5429938ef0a0de2395, type: 2}
-  m_PrefabInternal: {fileID: 2125788880}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1298122553}
-  - 15: {fileID: 1298122552}
-  - 12: {fileID: 1298122551}
-  - 26: {fileID: 1298122550}
-  m_Layer: 0
-  m_Name: Fluffy Smoke
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!26 &1298122550
-ParticleRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2600000, guid: 44b3febaf5142a5429938ef0a0de2395,
-    type: 2}
-  m_PrefabInternal: {fileID: 2125788880}
-  m_GameObject: {fileID: 1298122549}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 2100000, guid: 96558d9af5ccba84da0a06dc9afa072d, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_CameraVelocityScale: 0
-  m_StretchParticles: 0
-  m_LengthScale: 0
-  m_VelocityScale: 0
-  m_MaxParticleSize: 1
-  UV Animation:
-    x Tile: 1
-    y Tile: 1
-    cycles: 1
---- !u!12 &1298122551
-ParticleAnimator:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1200000, guid: 44b3febaf5142a5429938ef0a0de2395,
-    type: 2}
-  m_PrefabInternal: {fileID: 2125788880}
-  m_GameObject: {fileID: 1298122549}
-  Does Animate Color?: 1
-  colorAnimation[0]:
-    serializedVersion: 2
-    rgba: 8487297
-  colorAnimation[1]:
-    serializedVersion: 2
-    rgba: 1550280551
-  colorAnimation[2]:
-    serializedVersion: 2
-    rgba: 2523819630
-  colorAnimation[3]:
-    serializedVersion: 2
-    rgba: 2220974433
-  colorAnimation[4]:
-    serializedVersion: 2
-    rgba: 7368816
-  worldRotationAxis: {x: 0, y: 0, z: 0}
-  localRotationAxis: {x: 0, y: 0, z: 0}
-  sizeGrow: .100000001
-  rndForce: {x: .100000001, y: .100000001, z: .100000001}
-  force: {x: 0, y: 0, z: 0}
-  damping: 1
-  stopSimulation: 0
-  autodestruct: 0
---- !u!15 &1298122552
-EllipsoidParticleEmitter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1500000, guid: 44b3febaf5142a5429938ef0a0de2395,
-    type: 2}
-  m_PrefabInternal: {fileID: 2125788880}
-  m_GameObject: {fileID: 1298122549}
-  serializedVersion: 2
-  m_Enabled: 1
-  m_Emit: 1
-  minSize: 1.75
-  maxSize: 2
-  minEnergy: 10
-  maxEnergy: 10
-  minEmission: 25
-  maxEmission: 25
-  worldVelocity: {x: 0, y: 0, z: 0}
-  localVelocity: {x: 0, y: 1.5, z: 0}
-  rndVelocity: {x: .00999999978, y: .5, z: .00999999978}
-  emitterVelocityScale: .0500000007
-  tangentVelocity: {x: 0, y: 0, z: 0}
-  angularVelocity: 40
-  rndAngularVelocity: -10
-  rndRotation: 1
-  Simulate in Worldspace?: 1
-  m_OneShot: 0
-  m_Ellipsoid: {x: .75, y: 0, z: .75}
-  m_MinEmitterRange: 0
---- !u!4 &1298122553
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400000, guid: 44b3febaf5142a5429938ef0a0de2395, type: 2}
-  m_PrefabInternal: {fileID: 2125788880}
-  m_GameObject: {fileID: 1298122549}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 902, y: 65.6999969, z: 559}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!1001 &1436374413
 Prefab:
@@ -532,49 +412,5 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 2}
   m_RootGameObject: {fileID: 1264889728}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
---- !u!1001 &2125788880
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400000, guid: 44b3febaf5142a5429938ef0a0de2395, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 902
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 44b3febaf5142a5429938ef0a0de2395, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 65.6999969
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 44b3febaf5142a5429938ef0a0de2395, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 559
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 44b3febaf5142a5429938ef0a0de2395, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 44b3febaf5142a5429938ef0a0de2395, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 44b3febaf5142a5429938ef0a0de2395, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 44b3febaf5142a5429938ef0a0de2395, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 44b3febaf5142a5429938ef0a0de2395, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 44b3febaf5142a5429938ef0a0de2395, type: 2}
-  m_RootGameObject: {fileID: 1298122549}
   m_IsPrefabParent: 0
   m_IsExploded: 1
