@@ -122,11 +122,11 @@ Material:
       data:
         first:
           name: WaveSpeed
-        second: {r: 9, g: 4.5, b: -8, a: -3.5}
+        second: {r: 45, g: 4.5, b: -8, a: -3.5}
       data:
         first:
           name: _horizonColor
-        second: {r: .0817474052, g: .161498293, b: .308823526, a: 0}
+        second: {r: .0230860692, g: .149251819, b: .448529422, a: 0}
       data:
         first:
           name: _ColorControl_ST
