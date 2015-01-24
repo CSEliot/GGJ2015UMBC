@@ -37,14 +37,14 @@ public class PlayerInteraction : MonoBehaviour {
 				ableToInteract = true;
 			}
 		}
-
+		/*
 		//highlight crosshair to signal possible interaction
 		if (ableToInteract) {
 			ExecuteEvents.Execute(crossHair.gameObject, pointer, ExecuteEvents.pointerEnterHandler);
 		}
 		if (!ableToInteract) {
 			ExecuteEvents.Execute(crossHair.gameObject, pointer, ExecuteEvents.pointerExitHandler);		
-		}
+		}*/
 
 		//end update with disabling interaction
 		ableToInteract = false;
