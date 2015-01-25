@@ -1,0 +1,923 @@
+fileFormatVersion: 2
+guid: 36722746a276a044dae871224e67f2c6
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: antenna
+    100002: antenna_001
+    100004: antenna_002
+    100006: arm1_L
+    100008: arm1_R
+    100010: arm2_L
+    100012: arm2_R
+    100014: arm_L
+    100016: arm_pole_L
+    100018: arm_pole_R
+    100020: arm_R
+    100022: Armature
+    100024: base
+    100026: chest
+    100028: eye
+    100030: head
+    100032: heel_L
+    100034: heel_R
+    100036: key
+    100038: leg1_L
+    100040: leg1_R
+    100042: leg2_L
+    100044: leg2_R
+    100046: leg_000
+    100048: leg_001
+    100050: leg_002
+    100052: leg_003
+    100054: leg_004
+    100056: leg_005
+    100058: leg_006
+    100060: leg_007
+    100062: leg_008
+    100064: leg_010
+    100066: leg_011
+    100068: leg_012
+    100070: leg_013
+    100072: leg_014
+    100074: leg_015
+    100076: leg_017
+    100078: leg_controller_L
+    100080: leg_controller_R
+    100082: leg_L
+    100084: leg_pole_L
+    100086: leg_pole_R
+    100088: leg_R
+    100090: lower_claw2_L
+    100092: lower_claw2_R
+    100094: lower_claw_L
+    100096: lower_claw_R
+    100098: //RootNode
+    100100: toe_L
+    100102: toe_R
+    100104: upper_claw2_L
+    100106: upper_claw2_R
+    100108: upper_claw_L
+    100110: upper_claw_R
+    100112: wrist_control_L
+    100114: wrist_control_R
+    400000: antenna
+    400002: antenna_001
+    400004: antenna_002
+    400006: arm1_L
+    400008: arm1_R
+    400010: arm2_L
+    400012: arm2_R
+    400014: arm_L
+    400016: arm_pole_L
+    400018: arm_pole_R
+    400020: arm_R
+    400022: Armature
+    400024: base
+    400026: chest
+    400028: eye
+    400030: head
+    400032: heel_L
+    400034: heel_R
+    400036: key
+    400038: leg1_L
+    400040: leg1_R
+    400042: leg2_L
+    400044: leg2_R
+    400046: leg_000
+    400048: leg_001
+    400050: leg_002
+    400052: leg_003
+    400054: leg_004
+    400056: leg_005
+    400058: leg_006
+    400060: leg_007
+    400062: leg_008
+    400064: leg_010
+    400066: leg_011
+    400068: leg_012
+    400070: leg_013
+    400072: leg_014
+    400074: leg_015
+    400076: leg_017
+    400078: leg_controller_L
+    400080: leg_controller_R
+    400082: leg_L
+    400084: leg_pole_L
+    400086: leg_pole_R
+    400088: leg_R
+    400090: lower_claw2_L
+    400092: lower_claw2_R
+    400094: lower_claw_L
+    400096: lower_claw_R
+    400098: //RootNode
+    400100: toe_L
+    400102: toe_R
+    400104: upper_claw2_L
+    400106: upper_claw2_R
+    400108: upper_claw_L
+    400110: upper_claw_R
+    400112: wrist_control_L
+    400114: wrist_control_R
+    4300000: leg_011
+    4300002: leg_013
+    4300004: leg_007
+    4300006: leg_002
+    4300008: leg_014
+    4300010: leg_010
+    4300012: leg_017
+    4300014: leg_015
+    4300016: leg_008
+    4300018: leg_001
+    4300020: leg_003
+    4300022: leg_000
+    4300024: leg_005
+    4300026: leg_004
+    4300028: leg_006
+    4300030: leg_012
+    7400000: Default Take
+    7400002: crank
+    7400004: death
+    7400006: grab_walk
+    7400008: walk
+    9500000: //RootNode
+    13700000: leg_000
+    13700002: leg_001
+    13700004: leg_002
+    13700006: leg_003
+    13700008: leg_004
+    13700010: leg_005
+    13700012: leg_006
+    13700014: leg_007
+    13700016: leg_008
+    13700018: leg_010
+    13700020: leg_011
+    13700022: leg_012
+    13700024: leg_013
+    13700026: leg_014
+    13700028: leg_015
+    13700030: leg_017
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 46
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/arm_pole_L
+        weight: 1
+      - path: Armature/arm_pole_R
+        weight: 1
+      - path: Armature/base
+        weight: 1
+      - path: Armature/base/chest
+        weight: 1
+      - path: Armature/base/chest/arm_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L/arm2_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L/arm2_L/lower_claw_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L/arm2_L/lower_claw_L/lower_claw2_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L/arm2_L/upper_claw_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L/arm2_L/upper_claw_L/upper_claw2_L
+        weight: 1
+      - path: Armature/base/chest/arm_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R/arm2_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R/arm2_R/lower_claw_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R/arm2_R/lower_claw_R/lower_claw2_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R/arm2_R/upper_claw_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R/arm2_R/upper_claw_R/upper_claw2_R
+        weight: 1
+      - path: Armature/base/chest/head
+        weight: 1
+      - path: Armature/base/chest/head/antenna
+        weight: 1
+      - path: Armature/base/chest/head/antenna/antenna_001
+        weight: 1
+      - path: Armature/base/chest/head/antenna/antenna_001/antenna_002
+        weight: 1
+      - path: Armature/base/chest/head/eye
+        weight: 1
+      - path: Armature/base/chest/key
+        weight: 1
+      - path: Armature/base/chest/leg_L
+        weight: 1
+      - path: Armature/base/chest/leg_L/leg1_L
+        weight: 1
+      - path: Armature/base/chest/leg_L/leg1_L/leg2_L
+        weight: 1
+      - path: Armature/base/chest/leg_L/leg1_L/leg2_L/heel_L
+        weight: 1
+      - path: Armature/base/chest/leg_L/leg1_L/leg2_L/toe_L
+        weight: 1
+      - path: Armature/base/chest/leg_R
+        weight: 1
+      - path: Armature/base/chest/leg_R/leg1_R
+        weight: 1
+      - path: Armature/base/chest/leg_R/leg1_R/leg2_R
+        weight: 1
+      - path: Armature/base/chest/leg_R/leg1_R/leg2_R/heel_R
+        weight: 1
+      - path: Armature/base/chest/leg_R/leg1_R/leg2_R/toe_R
+        weight: 1
+      - path: Armature/leg_controller_L
+        weight: 1
+      - path: Armature/leg_controller_R
+        weight: 1
+      - path: Armature/leg_pole_L
+        weight: 1
+      - path: Armature/leg_pole_R
+        weight: 1
+      - path: Armature/wrist_control_L
+        weight: 1
+      - path: Armature/wrist_control_R
+        weight: 1
+      - path: leg_000
+        weight: 1
+      - path: leg_001
+        weight: 1
+      - path: leg_002
+        weight: 1
+      - path: leg_003
+        weight: 1
+      - path: leg_004
+        weight: 1
+      - path: leg_005
+        weight: 1
+      - path: leg_006
+        weight: 1
+      - path: leg_007
+        weight: 1
+      - path: leg_008
+        weight: 1
+      - path: leg_010
+        weight: 1
+      - path: leg_011
+        weight: 1
+      - path: leg_012
+        weight: 1
+      - path: leg_013
+        weight: 1
+      - path: leg_014
+        weight: 1
+      - path: leg_015
+        weight: 1
+      - path: leg_017
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: crank
+      takeName: crank
+      firstFrame: -1
+      lastFrame: 47
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/arm_pole_L
+        weight: 1
+      - path: Armature/arm_pole_R
+        weight: 1
+      - path: Armature/base
+        weight: 1
+      - path: Armature/base/chest
+        weight: 1
+      - path: Armature/base/chest/arm_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L/arm2_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L/arm2_L/lower_claw_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L/arm2_L/lower_claw_L/lower_claw2_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L/arm2_L/upper_claw_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L/arm2_L/upper_claw_L/upper_claw2_L
+        weight: 1
+      - path: Armature/base/chest/arm_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R/arm2_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R/arm2_R/lower_claw_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R/arm2_R/lower_claw_R/lower_claw2_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R/arm2_R/upper_claw_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R/arm2_R/upper_claw_R/upper_claw2_R
+        weight: 1
+      - path: Armature/base/chest/head
+        weight: 1
+      - path: Armature/base/chest/head/antenna
+        weight: 1
+      - path: Armature/base/chest/head/antenna/antenna_001
+        weight: 1
+      - path: Armature/base/chest/head/antenna/antenna_001/antenna_002
+        weight: 1
+      - path: Armature/base/chest/head/eye
+        weight: 1
+      - path: Armature/base/chest/key
+        weight: 1
+      - path: Armature/base/chest/leg_L
+        weight: 1
+      - path: Armature/base/chest/leg_L/leg1_L
+        weight: 1
+      - path: Armature/base/chest/leg_L/leg1_L/leg2_L
+        weight: 1
+      - path: Armature/base/chest/leg_L/leg1_L/leg2_L/heel_L
+        weight: 1
+      - path: Armature/base/chest/leg_L/leg1_L/leg2_L/toe_L
+        weight: 1
+      - path: Armature/base/chest/leg_R
+        weight: 1
+      - path: Armature/base/chest/leg_R/leg1_R
+        weight: 1
+      - path: Armature/base/chest/leg_R/leg1_R/leg2_R
+        weight: 1
+      - path: Armature/base/chest/leg_R/leg1_R/leg2_R/heel_R
+        weight: 1
+      - path: Armature/base/chest/leg_R/leg1_R/leg2_R/toe_R
+        weight: 1
+      - path: Armature/leg_controller_L
+        weight: 1
+      - path: Armature/leg_controller_R
+        weight: 1
+      - path: Armature/leg_pole_L
+        weight: 1
+      - path: Armature/leg_pole_R
+        weight: 1
+      - path: Armature/wrist_control_L
+        weight: 1
+      - path: Armature/wrist_control_R
+        weight: 1
+      - path: leg_000
+        weight: 1
+      - path: leg_001
+        weight: 1
+      - path: leg_002
+        weight: 1
+      - path: leg_003
+        weight: 1
+      - path: leg_004
+        weight: 1
+      - path: leg_005
+        weight: 1
+      - path: leg_006
+        weight: 1
+      - path: leg_007
+        weight: 1
+      - path: leg_008
+        weight: 1
+      - path: leg_010
+        weight: 1
+      - path: leg_011
+        weight: 1
+      - path: leg_012
+        weight: 1
+      - path: leg_013
+        weight: 1
+      - path: leg_014
+        weight: 1
+      - path: leg_015
+        weight: 1
+      - path: leg_017
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: death
+      takeName: death
+      firstFrame: -1
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/arm_pole_L
+        weight: 1
+      - path: Armature/arm_pole_R
+        weight: 1
+      - path: Armature/base
+        weight: 1
+      - path: Armature/base/chest
+        weight: 1
+      - path: Armature/base/chest/arm_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L/arm2_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L/arm2_L/lower_claw_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L/arm2_L/lower_claw_L/lower_claw2_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L/arm2_L/upper_claw_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L/arm2_L/upper_claw_L/upper_claw2_L
+        weight: 1
+      - path: Armature/base/chest/arm_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R/arm2_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R/arm2_R/lower_claw_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R/arm2_R/lower_claw_R/lower_claw2_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R/arm2_R/upper_claw_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R/arm2_R/upper_claw_R/upper_claw2_R
+        weight: 1
+      - path: Armature/base/chest/head
+        weight: 1
+      - path: Armature/base/chest/head/antenna
+        weight: 1
+      - path: Armature/base/chest/head/antenna/antenna_001
+        weight: 1
+      - path: Armature/base/chest/head/antenna/antenna_001/antenna_002
+        weight: 1
+      - path: Armature/base/chest/head/eye
+        weight: 1
+      - path: Armature/base/chest/key
+        weight: 1
+      - path: Armature/base/chest/leg_L
+        weight: 1
+      - path: Armature/base/chest/leg_L/leg1_L
+        weight: 1
+      - path: Armature/base/chest/leg_L/leg1_L/leg2_L
+        weight: 1
+      - path: Armature/base/chest/leg_L/leg1_L/leg2_L/heel_L
+        weight: 1
+      - path: Armature/base/chest/leg_L/leg1_L/leg2_L/toe_L
+        weight: 1
+      - path: Armature/base/chest/leg_R
+        weight: 1
+      - path: Armature/base/chest/leg_R/leg1_R
+        weight: 1
+      - path: Armature/base/chest/leg_R/leg1_R/leg2_R
+        weight: 1
+      - path: Armature/base/chest/leg_R/leg1_R/leg2_R/heel_R
+        weight: 1
+      - path: Armature/base/chest/leg_R/leg1_R/leg2_R/toe_R
+        weight: 1
+      - path: Armature/leg_controller_L
+        weight: 1
+      - path: Armature/leg_controller_R
+        weight: 1
+      - path: Armature/leg_pole_L
+        weight: 1
+      - path: Armature/leg_pole_R
+        weight: 1
+      - path: Armature/wrist_control_L
+        weight: 1
+      - path: Armature/wrist_control_R
+        weight: 1
+      - path: leg_000
+        weight: 1
+      - path: leg_001
+        weight: 1
+      - path: leg_002
+        weight: 1
+      - path: leg_003
+        weight: 1
+      - path: leg_004
+        weight: 1
+      - path: leg_005
+        weight: 1
+      - path: leg_006
+        weight: 1
+      - path: leg_007
+        weight: 1
+      - path: leg_008
+        weight: 1
+      - path: leg_010
+        weight: 1
+      - path: leg_011
+        weight: 1
+      - path: leg_012
+        weight: 1
+      - path: leg_013
+        weight: 1
+      - path: leg_014
+        weight: 1
+      - path: leg_015
+        weight: 1
+      - path: leg_017
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: grab_walk
+      takeName: grab_walk
+      firstFrame: -1
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/arm_pole_L
+        weight: 1
+      - path: Armature/arm_pole_R
+        weight: 1
+      - path: Armature/base
+        weight: 1
+      - path: Armature/base/chest
+        weight: 1
+      - path: Armature/base/chest/arm_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L/arm2_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L/arm2_L/lower_claw_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L/arm2_L/lower_claw_L/lower_claw2_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L/arm2_L/upper_claw_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L/arm2_L/upper_claw_L/upper_claw2_L
+        weight: 1
+      - path: Armature/base/chest/arm_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R/arm2_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R/arm2_R/lower_claw_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R/arm2_R/lower_claw_R/lower_claw2_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R/arm2_R/upper_claw_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R/arm2_R/upper_claw_R/upper_claw2_R
+        weight: 1
+      - path: Armature/base/chest/head
+        weight: 1
+      - path: Armature/base/chest/head/antenna
+        weight: 1
+      - path: Armature/base/chest/head/antenna/antenna_001
+        weight: 1
+      - path: Armature/base/chest/head/antenna/antenna_001/antenna_002
+        weight: 1
+      - path: Armature/base/chest/head/eye
+        weight: 1
+      - path: Armature/base/chest/key
+        weight: 1
+      - path: Armature/base/chest/leg_L
+        weight: 1
+      - path: Armature/base/chest/leg_L/leg1_L
+        weight: 1
+      - path: Armature/base/chest/leg_L/leg1_L/leg2_L
+        weight: 1
+      - path: Armature/base/chest/leg_L/leg1_L/leg2_L/heel_L
+        weight: 1
+      - path: Armature/base/chest/leg_L/leg1_L/leg2_L/toe_L
+        weight: 1
+      - path: Armature/base/chest/leg_R
+        weight: 1
+      - path: Armature/base/chest/leg_R/leg1_R
+        weight: 1
+      - path: Armature/base/chest/leg_R/leg1_R/leg2_R
+        weight: 1
+      - path: Armature/base/chest/leg_R/leg1_R/leg2_R/heel_R
+        weight: 1
+      - path: Armature/base/chest/leg_R/leg1_R/leg2_R/toe_R
+        weight: 1
+      - path: Armature/leg_controller_L
+        weight: 1
+      - path: Armature/leg_controller_R
+        weight: 1
+      - path: Armature/leg_pole_L
+        weight: 1
+      - path: Armature/leg_pole_R
+        weight: 1
+      - path: Armature/wrist_control_L
+        weight: 1
+      - path: Armature/wrist_control_R
+        weight: 1
+      - path: leg_000
+        weight: 1
+      - path: leg_001
+        weight: 1
+      - path: leg_002
+        weight: 1
+      - path: leg_003
+        weight: 1
+      - path: leg_004
+        weight: 1
+      - path: leg_005
+        weight: 1
+      - path: leg_006
+        weight: 1
+      - path: leg_007
+        weight: 1
+      - path: leg_008
+        weight: 1
+      - path: leg_010
+        weight: 1
+      - path: leg_011
+        weight: 1
+      - path: leg_012
+        weight: 1
+      - path: leg_013
+        weight: 1
+      - path: leg_014
+        weight: 1
+      - path: leg_015
+        weight: 1
+      - path: leg_017
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: walk
+      takeName: walk
+      firstFrame: -1
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/arm_pole_L
+        weight: 1
+      - path: Armature/arm_pole_R
+        weight: 1
+      - path: Armature/base
+        weight: 1
+      - path: Armature/base/chest
+        weight: 1
+      - path: Armature/base/chest/arm_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L/arm2_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L/arm2_L/lower_claw_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L/arm2_L/lower_claw_L/lower_claw2_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L/arm2_L/upper_claw_L
+        weight: 1
+      - path: Armature/base/chest/arm_L/arm1_L/arm2_L/upper_claw_L/upper_claw2_L
+        weight: 1
+      - path: Armature/base/chest/arm_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R/arm2_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R/arm2_R/lower_claw_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R/arm2_R/lower_claw_R/lower_claw2_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R/arm2_R/upper_claw_R
+        weight: 1
+      - path: Armature/base/chest/arm_R/arm1_R/arm2_R/upper_claw_R/upper_claw2_R
+        weight: 1
+      - path: Armature/base/chest/head
+        weight: 1
+      - path: Armature/base/chest/head/antenna
+        weight: 1
+      - path: Armature/base/chest/head/antenna/antenna_001
+        weight: 1
+      - path: Armature/base/chest/head/antenna/antenna_001/antenna_002
+        weight: 1
+      - path: Armature/base/chest/head/eye
+        weight: 1
+      - path: Armature/base/chest/key
+        weight: 1
+      - path: Armature/base/chest/leg_L
+        weight: 1
+      - path: Armature/base/chest/leg_L/leg1_L
+        weight: 1
+      - path: Armature/base/chest/leg_L/leg1_L/leg2_L
+        weight: 1
+      - path: Armature/base/chest/leg_L/leg1_L/leg2_L/heel_L
+        weight: 1
+      - path: Armature/base/chest/leg_L/leg1_L/leg2_L/toe_L
+        weight: 1
+      - path: Armature/base/chest/leg_R
+        weight: 1
+      - path: Armature/base/chest/leg_R/leg1_R
+        weight: 1
+      - path: Armature/base/chest/leg_R/leg1_R/leg2_R
+        weight: 1
+      - path: Armature/base/chest/leg_R/leg1_R/leg2_R/heel_R
+        weight: 1
+      - path: Armature/base/chest/leg_R/leg1_R/leg2_R/toe_R
+        weight: 1
+      - path: Armature/leg_controller_L
+        weight: 1
+      - path: Armature/leg_controller_R
+        weight: 1
+      - path: Armature/leg_pole_L
+        weight: 1
+      - path: Armature/leg_pole_R
+        weight: 1
+      - path: Armature/wrist_control_L
+        weight: 1
+      - path: Armature/wrist_control_R
+        weight: 1
+      - path: leg_000
+        weight: 1
+      - path: leg_001
+        weight: 1
+      - path: leg_002
+        weight: 1
+      - path: leg_003
+        weight: 1
+      - path: leg_004
+        weight: 1
+      - path: leg_005
+        weight: 1
+      - path: leg_006
+        weight: 1
+      - path: leg_007
+        weight: 1
+      - path: leg_008
+        weight: 1
+      - path: leg_010
+        weight: 1
+      - path: leg_011
+        weight: 1
+      - path: leg_012
+        weight: 1
+      - path: leg_013
+        weight: 1
+      - path: leg_014
+        weight: 1
+      - path: leg_015
+        weight: 1
+      - path: leg_017
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .5
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
