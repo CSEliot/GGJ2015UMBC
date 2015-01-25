@@ -28,6 +28,7 @@ GameObject:
   - 95: {fileID: 9511518}
   - 65: {fileID: 6511518}
   - 54: {fileID: 5411518}
+  - 114: {fileID: 11424318}
   m_Layer: 0
   m_Name: steering_wheel
   m_TagString: Item
@@ -54,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 111520}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.01999998, y: 1.51999998, z: 0}
+  m_LocalPosition: {x: 631.494629, y: 29.0313911, z: 497.72821}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 411518}
@@ -129,6 +130,33 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11424318
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10a6030a61ee571429a44c58deb3e0bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  part1: {fileID: 0}
+  part2: {fileID: 0}
+  part3: {fileID: 0}
+  part4: {fileID: 0}
+  part5: {fileID: 0}
+  avgDistance: 0
+  distance1to2: 0
+  distance1to3: 0
+  distance1to4: 0
+  distance1to5: 0
+  distanceSum: 0
+  posPart1: {x: 0, y: 0, z: 0}
+  posPart2: {x: 0, y: 0, z: 0}
+  posPart3: {x: 0, y: 0, z: 0}
+  posPart4: {x: 0, y: 0, z: 0}
+  posPart5: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
