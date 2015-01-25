@@ -19,7 +19,6 @@ public class PlayerInteraction : MonoBehaviour {
 	}
 
 	void Update () {
-		Screen.lockCursor = true;
 	}
 
 	// Update is called once per frame
