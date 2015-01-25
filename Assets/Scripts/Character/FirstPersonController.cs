@@ -144,7 +144,8 @@ public class FirstPersonController : MonoBehaviour {
 
 			}
 			if (true) {
-				if(Input.GetAxis("p1_Forward") > 0.1f || Input.GetAxis("p1_Forward") < -0.1f ){
+				if(Input.GetAxis("p1_Forward") > 0.1f || Input.GetAxis("p1_Forward") < -0.1f  
+				   || Input.GetAxis("p1_Strafe") > 0.1f || Input.GetAxis("p1_Strafe") < -0.1f ){
 					animController.SetInteger("isState", 1);
 					if(isCarrying){
 						animController.SetInteger("isState", 2);
@@ -186,7 +187,8 @@ public class FirstPersonController : MonoBehaviour {
 				Debug.Log(GameObject.Find ("TypeCanvas").transform.GetChild (1).GetChild(2).GetComponent<Text>().text);
 				//wait till message is completely written.
 				if(Input.GetKeyDown("return")){
-					GameObject sign = Instantiate(signToPlaceUponDeath, gameObject.transform.position, gameObject.transform.rotation) as GameObject;
+					
+					GameObject sign = Instantiate(signToPlaceUponDeath, gameObject.transform.position+(Vector3.up*3.2f), gameObject.transform.rotation) as GameObject;
 					sign.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = 
 						GameObject.Find ("TypeCanvas").transform.GetChild (1).GetChild(2).GetComponent<Text>().text;
 					messageEdited = 3;
@@ -208,12 +210,20 @@ public class FirstPersonController : MonoBehaviour {
 		return isDead;
 	}
 
+	public bool getIsCarrying(){
+		return isCarrying;
+	}
+
 	public void setCarrying(bool hasCarry){
 		isCarrying = hasCarry;	
 	}
 
 	public void killPlayer(){
-		Debug.Log("SUICIDED!");
+		if (isCarrying) {
+			this.gameObject.transform.GetChild(0).GetChild(0).parent = null;
+			this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<BoxCollider>().enabled = true;
+			this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<Rigidbody>().isKinematic = false;
+		}
 		GameObject.Find ("DeathTracker").GetComponent<DeathTracker> ().increaseDeathCount ();
 		isDead = true;
 		messageEdited = 2;

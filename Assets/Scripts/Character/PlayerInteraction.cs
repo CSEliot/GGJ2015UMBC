@@ -23,7 +23,14 @@ public class PlayerInteraction : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
-
+		if(Input.GetButtonUp("Submit") && this.GetComponent<FirstPersonController>().getIsCarrying() == true){
+			Debug.Log("SUBMIT BUTTON GOING UP");
+			this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<BoxCollider>().enabled = true;
+			this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<Rigidbody>().isKinematic = false;
+			this.gameObject.transform.GetChild(0).GetChild(0).parent = null;
+			//deactivate collider
+			this.GetComponent<FirstPersonController>().setCarrying(false);
+		}
 		//make a pointer to trigger events for the ui without needing to move the mouse around
 		PointerEventData pointer = new PointerEventData(EventSystem.current);
 
@@ -38,6 +45,16 @@ public class PlayerInteraction : MonoBehaviour {
 			//every if statement will now check for whether we hit an interactable object or not
 			if (hitInfo.transform.tag == "table") {
 				ableToInteract = true;
+			}
+			if (hitInfo.transform.tag == "Item" && this.GetComponent<FirstPersonController>().getIsCarrying() == false) {
+				ableToInteract = true;
+				if(Input.GetButtonDown("Submit")){
+					hitInfo.transform.parent = this.gameObject.transform.GetChild(0).transform;
+					//deactivate collider
+					this.GetComponent<FirstPersonController>().setCarrying(true);
+					this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<BoxCollider>().enabled = false;
+					this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<Rigidbody>().isKinematic = true;
+				}
 			}
 		}
 
