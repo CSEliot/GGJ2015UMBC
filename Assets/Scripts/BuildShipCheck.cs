@@ -62,7 +62,7 @@ public class BuildShipCheck : MonoBehaviour {
 		distanceSum = distance1to2 + distance1to3 + distance1to4 + distance1to5;
 		avgDistance = distanceSum / 4f;
 		
-		if (avgDistance < 3f) {
+		if (avgDistance < 4f) {
 			//assemble ship player wins
 			Debug.Log("player wins and builds ship");
 		}
