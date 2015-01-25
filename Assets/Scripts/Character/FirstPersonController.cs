@@ -220,9 +220,10 @@ public class FirstPersonController : MonoBehaviour {
 
 	public void killPlayer(){
 		if (isCarrying) {
-			this.gameObject.transform.GetChild(0).GetChild(0).parent = null;
 			this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<BoxCollider>().enabled = true;
 			this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<Rigidbody>().isKinematic = false;
+			this.gameObject.transform.GetChild(0).GetChild(0).parent = null;
+			isCarrying = false;
 		}
 		GameObject.Find ("DeathTracker").GetComponent<DeathTracker> ().increaseDeathCount ();
 		isDead = true;
