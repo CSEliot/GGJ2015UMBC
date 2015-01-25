@@ -70,7 +70,7 @@ public class GeneralTraps : MonoBehaviour {
 				Debug.Log("Player has gotten caught in a bear trap"); 
 
 
-				BearTrap.animation.Play();
+				//BearTrap.GetComponent<Animator>().Play("kill");
 
 				//kill the player 
 				other.gameObject.transform.GetComponent<FirstPersonController>().killPlayer(); 

@@ -148,9 +148,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 490224}
   - 95: {fileID: 9590206}
+  - 114: {fileID: 11481038}
+  - 65: {fileID: 6549094}
   m_Layer: 0
   m_Name: bear_trap
-  m_TagString: Untagged
+  m_TagString: BearTrap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -274,7 +276,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 190224}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.72000003, y: 0, z: -1.17999995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 490222}
@@ -284,6 +286,18 @@ Transform:
   - {fileID: 490214}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!65 &6549094
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190224}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.25646496, y: .640973091, z: 2.43867826}
+  m_Center: {x: .0171029568, y: .179513454, z: -.0383564234}
 --- !u!95 &9590206
 Animator:
   serializedVersion: 3
@@ -293,12 +307,25 @@ Animator:
   m_GameObject: {fileID: 190224}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 189dc424499860945bacf4cccad2e4b3, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0164e9db1ba8ac948b9f9a7cad8bbea4, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11481038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edaa8079889bce54ba8d3af55e01fc32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activatedTrap: 0
+  BearTrap: {fileID: 190224}
 --- !u!137 &13790206
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
