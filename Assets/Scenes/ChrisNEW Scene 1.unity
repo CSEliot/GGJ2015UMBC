@@ -229,7 +229,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 9330221}
   - 137: {fileID: 9330222}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg_012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -534,7 +534,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 20433918}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: arm1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -882,7 +882,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 32707662}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1127,7 +1127,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 40180063}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: arm2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1156,7 +1156,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 43612621}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: arm_pole_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1273,7 +1273,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 46739578}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg_pole_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1891,7 +1891,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 94420577}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: arm2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2194,6 +2194,21 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 7cb2912222469634ba17a77055919ea8, type: 3}
+    m_FontSize: 23
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Your last words . . .
 --- !u!222 &106863470
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2379,6 +2394,16 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
 --- !u!222 &114300421
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2599,7 +2624,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 132747733}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: upper_claw2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2819,7 +2844,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 148768867}
   - 137: {fileID: 148768868}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg_006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2962,7 +2987,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 155447356}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: wrist_control_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3035,7 +3060,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 157396708}
   - 137: {fileID: 157396709}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg_013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3315,7 +3340,7 @@ GameObject:
   - 54: {fileID: 172560357}
   - 114: {fileID: 172560356}
   - 114: {fileID: 172560355}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Player 1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3349,7 +3374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossHair: {fileID: 1515795313}
-  reach: 2
+  reach: 8
 --- !u!114 &172560356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4271,7 +4296,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 228514696}
   - 137: {fileID: 228514697}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg_014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6046,6 +6071,11 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ignoreReversedGraphics: 1
+  blockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!114 &339859834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6058,6 +6088,16 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
 --- !u!223 &339859835
 Canvas:
   m_ObjectHideFlags: 0
@@ -6084,7 +6124,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 344283120}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: lower_claw_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6112,7 +6152,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 352200653}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6335,6 +6375,43 @@ MonoBehaviour:
   m_Script: {fileID: -113659843, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: .501960814}
+    m_ColorMultiplier: 1
+    m_FadeDuration: .100000001
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_FillRect: {fileID: 1957125695}
+  m_HandleRect: {fileID: 0}
+  m_Direction: 0
+  m_MinValue: 0
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &365693886
 GameObject:
   m_ObjectHideFlags: 0
@@ -6581,7 +6658,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 380068050}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: upper_claw2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7266,7 +7343,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 429764023}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7598,6 +7675,53 @@ MonoBehaviour:
   m_Script: {fileID: 575553740, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: .960784316, g: .960784316, b: .960784316, a: 1}
+    m_PressedColor: {r: .784313738, g: .784313738, b: .784313738, a: 1}
+    m_DisabledColor: {r: .784313738, g: .784313738, b: .784313738, a: .501960814}
+    m_ColorMultiplier: 1
+    m_FadeDuration: .100000001
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 446113265}
+  m_TextComponent: {fileID: 1547652642}
+  m_Placeholder: {fileID: 982647820}
+  m_ContentType: 0
+  m_InputType: 0
+  m_KeyboardType: 0
+  m_LineType: 0
+  m_HideMobileInput: 0
+  m_CharacterValidation: 0
+  m_CharacterLimit: 13
+  m_EndEdit:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.InputField+SubmitEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnValueChange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.InputField+OnChangeEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_SelectionColor: {r: .65882355, g: .807843149, b: 1, a: .752941191}
+  m_Text: 
+  m_CaretBlinkRate: 1.70000005
 --- !u!114 &446113265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7610,6 +7734,16 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
 --- !u!222 &446113266
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8142,7 +8276,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 465411095}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8363,7 +8497,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 485004262}
   - 137: {fileID: 485004263}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg_007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8462,7 +8596,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 487550290}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: arm_pole_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8886,7 +9020,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 514053241}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: toe_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9297,7 +9431,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 541851038}
   - 137: {fileID: 541851039}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg_000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10473,7 +10607,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 629353637}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: antenna_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11208,7 +11342,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 666534585}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: antenna_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11649,7 +11783,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 712489044}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: arm1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11853,7 +11987,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 735417428}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: lower_claw_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12288,7 +12422,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 763253255}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: arm_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12360,7 +12494,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 766592068}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12564,7 +12698,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 782824159}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg_pole_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13205,7 +13339,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 821557080}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13488,7 +13622,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 832426304}
   - 137: {fileID: 832426305}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg_008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13588,7 +13722,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 838174176}
   - 137: {fileID: 838174177}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg_005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14118,6 +14252,7 @@ MonoBehaviour:
   m_Script: {fileID: 1997211142, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_AllowActivationOnStandalone: 0
 --- !u!114 &854799167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14129,6 +14264,12 @@ MonoBehaviour:
   m_Script: {fileID: 1077351063, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_AllowActivationOnMobileDevice: 0
 --- !u!114 &854799168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14140,6 +14281,9 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 5
 --- !u!4 &854799169
 Transform:
   m_ObjectHideFlags: 0
@@ -14684,7 +14828,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 900725425}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg_controller_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14712,7 +14856,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 902583016}
   - 137: {fileID: 902583017}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg_010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15924,6 +16068,21 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .1953125, g: .1953125, b: .1953125, a: .5}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 2
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: are here.
 --- !u!222 &982647821
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16479,7 +16638,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1046467821}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: upper_claw_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17909,7 +18068,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1127545816}
   - 137: {fileID: 1127545817}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg_015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18686,7 +18845,7 @@ GameObject:
   - 92: {fileID: 1202202315}
   - 124: {fileID: 1202202314}
   - 81: {fileID: 1202202313}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -18993,7 +19152,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1216774178}
   - 137: {fileID: 1216774179}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19093,7 +19252,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1222985251}
   - 95: {fileID: 1222985252}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: robot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19301,7 +19460,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1238128696}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: lower_claw2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19476,7 +19635,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1257288755}
   - 137: {fileID: 1257288756}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20849,7 +21008,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1327083025}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: wrist_control_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22796,7 +22955,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1469677170}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg_controller_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23304,6 +23463,36 @@ MonoBehaviour:
   m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
+    m_PressedColor: {r: 1, g: 0, b: 0, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
+    m_ColorMultiplier: 1
+    m_FadeDuration: .100000001
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1515795314}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1515795314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23316,6 +23505,16 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
 --- !u!222 &1515795315
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23880,6 +24079,21 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_RichText: 0
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
 --- !u!222 &1547652643
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24304,7 +24518,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1583895571}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: lower_claw2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25794,7 +26008,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1703994752}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: heel_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26188,7 +26402,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1734453411}
   - 137: {fileID: 1734453412}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg_011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26377,7 +26591,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1736388196}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: heel_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26952,7 +27166,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1775613762}
   - 137: {fileID: 1775613763}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27198,7 +27412,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1788767112}
   - 137: {fileID: 1788767113}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28285,7 +28499,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1845394047}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28312,7 +28526,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1851626782}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: upper_claw_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29818,6 +30032,16 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
 --- !u!222 &1957125697
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -29965,7 +30189,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1960465073}
   - 137: {fileID: 1960465074}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg_017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30064,7 +30288,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1961696313}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30240,7 +30464,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1976530654}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30959,7 +31183,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2013774387}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: arm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31060,7 +31284,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2017235944}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: antenna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31656,7 +31880,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2066919883}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: toe_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32296,7 +32520,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2098514889}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32436,7 +32660,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2105253009}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32817,7 +33041,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2139884384}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
