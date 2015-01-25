@@ -1697,11 +1697,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 156072}
   m_LocalRotation: {x: 0, y: .687616587, z: 0, w: -.72607398}
-<<<<<<< local
   m_LocalPosition: {x: 318, y: -224, z: 363}
-=======
-  m_LocalPosition: {x: -1313.27002, y: 249.039993, z: -934.719971}
->>>>>>> other
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 456070}
@@ -1830,11 +1826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossHair: {fileID: 0}
-<<<<<<< local
   reach: 8
-=======
-  reach: 10
->>>>>>> other
 --- !u!124 &12456072
 Behaviour:
   m_ObjectHideFlags: 1
