@@ -164,6 +164,7 @@ GameObject:
   - 4: {fileID: 461394}
   - 95: {fileID: 9561374}
   - 65: {fileID: 6561374}
+  - 54: {fileID: 5434560}
   m_Layer: 0
   m_Name: moter
   m_TagString: Item
@@ -303,7 +304,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 161394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.07384181, y: -5.38110039e-17, z: 2.42343211}
+  m_LocalPosition: {x: 618.444214, y: 26.3972511, z: 508.665466}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 461392}
@@ -313,6 +314,21 @@ Transform:
   - {fileID: 461384}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!54 &5434560
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161394}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &6561374
 BoxCollider:
   m_ObjectHideFlags: 1

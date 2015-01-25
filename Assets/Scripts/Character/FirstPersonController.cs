@@ -107,6 +107,9 @@ public class FirstPersonController : MonoBehaviour {
 		
 		clock = clock + Time.deltaTime;
 
+		if (health.value <= 0.01f) {
+			killPlayer();
+		}
 		//suicide
 		if (Input.GetKeyDown("k") && isDead == false) {
 			killPlayer();
@@ -239,6 +242,7 @@ public class FirstPersonController : MonoBehaviour {
 		            GameObject.Find("SpawnPoint").transform.rotation
 		            );
 		gameObject.transform.GetChild(0).gameObject.SetActive(false);
+		health.value = 1.0f;
 	}
 
 	private void setControlStrings(){
