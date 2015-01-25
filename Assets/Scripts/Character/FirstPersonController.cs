@@ -69,6 +69,12 @@ public class FirstPersonController : MonoBehaviour {
     private Vector3 startingCameraRotation;
     private Vector3 newRotationAngle;
 
+	//Anim Controller
+	private Animator animController;
+
+	//carrying object
+	private bool isCarrying;
+
 	void Awake () {
 		rigidbody.freezeRotation = true;
 		rigidbody.useGravity = false;
@@ -77,6 +83,7 @@ public class FirstPersonController : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		animController = gameObject.transform.GetChild (1).GetComponent<Animator> ();
 		messageEdited = 1;
         canCheckForJump = true;
         newRotationAngle = new Vector3();
@@ -85,6 +92,7 @@ public class FirstPersonController : MonoBehaviour {
 		setControlStrings();
 		rotLeftRight = 0.0f;
 		isDead = false;
+		isCarrying = false;
 		health.value = 1.0f;
 		gameObject.rigidbody.isKinematic = false;
 	}
@@ -136,8 +144,18 @@ public class FirstPersonController : MonoBehaviour {
 
 			}
 			if (true) {
-
-				//Gram being a massive jerk. DONT EVER ENABLE THIS. IM WARNING YOU
+				if(Input.GetAxis("p1_Forward") > 0.1f || Input.GetAxis("p1_Forward") < -0.1f ){
+					animController.SetInteger("isState", 1);
+					if(isCarrying){
+						animController.SetInteger("isState", 2);
+					}
+				}else{
+					if(isDead){
+						animController.SetInteger("isState", 3);
+					}else{
+						animController.SetInteger("isState", 0);
+					}
+				}
 				Vector3 targetVelocity;
 				targetVelocity = new Vector3 (Input.GetAxis (Strf_str), 0, Input.GetAxis (FWmv_str));
 				
@@ -152,7 +170,7 @@ public class FirstPersonController : MonoBehaviour {
 				velocityChange.y = 0;
 
 				rigidbody.AddForce (velocityChange, ForceMode.VelocityChange);
-
+				
 				// Jump
 				//Manager.say("Jumping action go. Jumps Made: " + totalJumpsMade + " Jumps Allowed: " + totalJumpsAllowed, "eliot");
 			}
@@ -190,6 +208,10 @@ public class FirstPersonController : MonoBehaviour {
 		return isDead;
 	}
 
+	public void setCarrying(bool hasCarry){
+		isCarrying = hasCarry;	
+	}
+
 	public void killPlayer(){
 		Debug.Log("SUICIDED!");
 		GameObject.Find ("DeathTracker").GetComponent<DeathTracker> ().increaseDeathCount ();
@@ -197,6 +219,7 @@ public class FirstPersonController : MonoBehaviour {
 		messageEdited = 2;
 		gameObject.rigidbody.isKinematic = true;
 		Screen.lockCursor = false;
+		animController.SetInteger ("isState", 3);
 		GameObject.Find ("TypeCanvas").transform.GetChild (1).gameObject.SetActive (true);
 	}
 	private void rezPlayer(){
