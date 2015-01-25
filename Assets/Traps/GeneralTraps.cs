@@ -20,6 +20,7 @@ public class GeneralTraps : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
+		Debug.Log ("Tiggered: " + other.name + " " + other.tag);
 		//Switch trap to actived status 
 		activatedTrap = true; 
 
@@ -34,7 +35,7 @@ public class GeneralTraps : MonoBehaviour {
 			{
 				Debug.Log("Player has fallen into a pit");
 				//kill the player
-				other.gameObject.transform.GetComponent<FirstPersonController>.killPlayer(); 
+				other.gameObject.transform.GetComponent<FirstPersonController>().killPlayer(); 
 
 		
 
@@ -56,7 +57,7 @@ public class GeneralTraps : MonoBehaviour {
 			{
 				Debug.Log("Player went by a mine");
 				//kill the player
-				other.gameObject.transform.GetComponent<FirstPersonController>.killPlayer(); 
+				other.gameObject.transform.GetComponent<FirstPersonController>().killPlayer(); 
 					
 				//reset the trap
 				activatedTrap = false; 
@@ -72,7 +73,7 @@ public class GeneralTraps : MonoBehaviour {
 				BearTrap.animation.Play();
 
 				//kill the player 
-				other.gameObject.transform.GetComponent<FirstPersonController>.killPlayer(); 
+				other.gameObject.transform.GetComponent<FirstPersonController>().killPlayer(); 
 			}
 
 			else 

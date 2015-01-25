@@ -4,6 +4,11 @@
 TagManager:
   tags:
   - 
+  - Mine
+  - Steam
+  - Pit
+  - Item
+  - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
   Builtin Layer 2: Ignore Raycast
