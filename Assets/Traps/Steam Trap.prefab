@@ -79,14 +79,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a684262c0091cda49bf4824147bc3c54, type: 3}
+  m_Script: {fileID: 11500000, guid: 428245f39e864954fac4942d19765a99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   activatedTrap: 0
-  rockWarning: 0
-  smallRock: {fileID: 0}
-  BigRock: {fileID: 0}
-  Spawner: {fileID: 0}
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
