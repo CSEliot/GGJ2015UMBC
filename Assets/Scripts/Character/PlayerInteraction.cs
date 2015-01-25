@@ -19,12 +19,13 @@ public class PlayerInteraction : MonoBehaviour {
 	}
 
 	void Update () {
+		Screen.lockCursor = true;
 	}
 
 	// Update is called once per frame
 	void FixedUpdate () {
 		if(Input.GetButtonUp("Submit") && this.GetComponent<FirstPersonController>().getIsCarrying() == true){
-			Debug.Log("SUBMIT BUTTON GOING UP");
+			//Debug.Log("SUBMIT BUTTON GOING UP");
 			this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<BoxCollider>().enabled = true;
 			this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<Rigidbody>().isKinematic = false;
 			this.gameObject.transform.GetChild(0).GetChild(0).parent = null;

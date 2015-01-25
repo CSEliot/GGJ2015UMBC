@@ -102,8 +102,8 @@ public class FirstPersonController : MonoBehaviour {
 	void FixedUpdate () {
 
 		//player's mortality slowly coming to it's inevitable conclusion
-		//300 second life span
-		health.value = health.value - ((0.1f * Time.deltaTime) / 30.0f);
+		//210 second life span
+		health.value = health.value - ((0.1f * Time.deltaTime) / 18.0f);//18 = 3mins, 24 = 4mins, 30 = 5mins...
 		
 		clock = clock + Time.deltaTime;
 
