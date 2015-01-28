@@ -5,7 +5,7 @@ using System.Collections;
 
 public class PlayerInteraction : MonoBehaviour {
 
-	Ray rayOrigin;
+	Ray rayOrigin; 
 	RaycastHit hitInfo;
 	Vector3 rayOriginStart;
 	bool ableToInteract;
@@ -23,7 +23,7 @@ public class PlayerInteraction : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
-		if(Input.GetButtonUp("Submit") && this.GetComponent<FirstPersonController>().getIsCarrying() == true){
+		if(Input.GetButtonUp("p1_Fire") && this.GetComponent<FirstPersonController>().getIsCarrying() == true){
 			//Debug.Log("SUBMIT BUTTON GOING UP");
 			this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<BoxCollider>().enabled = true;
 			this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<Rigidbody>().isKinematic = false;
@@ -48,7 +48,7 @@ public class PlayerInteraction : MonoBehaviour {
 			}
 			if (hitInfo.transform.tag == "Item" && this.GetComponent<FirstPersonController>().getIsCarrying() == false) {
 				ableToInteract = true;
-				if(Input.GetButtonDown("Submit")){
+				if(Input.GetButtonDown("p1_Fire")){
 					hitInfo.transform.parent = this.gameObject.transform.GetChild(0).transform;
 					//deactivate collider
 					this.GetComponent<FirstPersonController>().setCarrying(true);
