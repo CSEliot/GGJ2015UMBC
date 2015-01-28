@@ -257,6 +257,7 @@ public class FirstPersonController : MonoBehaviour {
 		Screen.lockCursor = false;
 		animController.SetInteger ("isState", 3);
 		GameObject.Find ("TypeCanvas").transform.GetChild (1).gameObject.SetActive (true);
+        GameObject.Find("TypeCanvas").transform.GetChild(1).GetComponent<InputField>().text = "";
 	}
 	private void rezPlayer(){
 		Instantiate(cloneToCopyUponDeath, 
