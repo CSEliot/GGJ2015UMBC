@@ -109,6 +109,11 @@ public class FirstPersonController : MonoBehaviour {
 
 	void FixedUpdate () {
 
+        if (Input.GetKeyDown("r"))
+        {
+            Application.LoadLevel(Application.loadedLevel);
+        }
+
 		rayOrigin = new Ray(transform.position, transform.up*-1);
 
 		//if you are able to reach something, anything important or not

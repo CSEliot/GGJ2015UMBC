@@ -56,6 +56,13 @@ public class PlayerInteraction : MonoBehaviour {
 					this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<Rigidbody>().isKinematic = true;
 				}
 			}
+            if (hitInfo.transform.tag == "Button")
+            {
+                if (Input.GetButtonDown("p1_Fire"))
+                {
+                    transform.GetComponent<FirstPersonController>().health.value = 1.0f;
+                }
+            }
 		}
 
 		//highlight crosshair to signal possible interaction
