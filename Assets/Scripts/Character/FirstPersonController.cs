@@ -64,6 +64,14 @@ public class FirstPersonController : MonoBehaviour {
 
     public bool isZoomed = false;
 
+
+    //cliff control
+    Ray rayOrigin;
+    RaycastHit hitInfo;
+    Vector3 rayOriginStart;
+    bool ableToInteract;
+    bool canMove;
+
     //For looking, we are assigning rotations, but we need original values
     //that aren't getting modified, so we can re-assign them.
     private Vector3 startingCameraRotation;
@@ -101,6 +109,20 @@ public class FirstPersonController : MonoBehaviour {
 
 	void FixedUpdate () {
 
+		rayOrigin = new Ray(transform.position, transform.up*-1);
+
+		//if you are able to reach something, anything important or not
+        if (Physics.Raycast(rayOrigin, out hitInfo)) {
+            if (Time.time % 2f > 1.8f) { Debug.Log("Below me is: " + hitInfo.normal.y); }
+            if (hitInfo.normal.y <= 0.4f)
+            {
+                canMove = false;
+            }
+            else
+            {
+                canMove = true;
+            }
+        }
 		//player's mortality slowly coming to it's inevitable conclusion
 		//210 second life span
 		health.value = health.value - ((0.1f * Time.deltaTime) / 18.0f);//18 = 3mins, 24 = 4mins, 30 = 5mins...
@@ -146,7 +168,7 @@ public class FirstPersonController : MonoBehaviour {
 				Invoke ("AllowJumpCheck", 0.1f);
 
 			}
-			if (true) {
+			if (canMove) {
 				if(Input.GetAxis("p1_Forward") > 0.1f || Input.GetAxis("p1_Forward") < -0.1f  
 				   || Input.GetAxis("p1_Strafe") > 0.1f || Input.GetAxis("p1_Strafe") < -0.1f ){
 					animController.SetInteger("isState", 1);

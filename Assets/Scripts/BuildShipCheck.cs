@@ -66,7 +66,9 @@ public class BuildShipCheck : MonoBehaviour {
 		
 		distanceSum = distance1to2 + distance1to3 + distance1to4 + distance1to5;
 		avgDistance = distanceSum / 4f;
-		
+
+        //if(Time.time%2f>1.5f)Debug.Log("Avg Distance is: " + avgDistance);
+
 		if (avgDistance < 4f && !GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().getIsCarrying() && !shipSpawned) {
 			//assemble ship player wins
 			Debug.Log("player wins and builds ship");
