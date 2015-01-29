@@ -24,6 +24,15 @@ public class GeneralTraps : MonoBehaviour {
 		//Switch trap to actived status 
 		activatedTrap = true; 
 
+		if (other.gameObject.CompareTag ("Item") && this.tag == "Pit") {
+			string returnName = other.gameObject.name + "Home";
+			GameObject home = GameObject.Find(returnName);
+			other.rigidbody.isKinematic = true;
+			other.transform.parent = home.transform;
+			other.transform.localPosition = Vector3.zero;
+			other.rigidbody.isKinematic = false;
+		}
+
 		//as long as trap was activated by the player. 
 		if (activatedTrap && other.gameObject.CompareTag("Player") )
 		{

@@ -135,6 +135,7 @@ public class FirstPersonController : MonoBehaviour {
 		clock = clock + Time.deltaTime;
 
 		if (health.value <= 0.01f) {
+			health.value = 1.0f;
 			killPlayer();
 		}
 		//suicide
@@ -217,7 +218,7 @@ public class FirstPersonController : MonoBehaviour {
 				Debug.Log(GameObject.Find ("TypeCanvas").transform.GetChild (1).GetChild(2).GetComponent<Text>().text);
 				//wait till message is completely written.
 				if(Input.GetKeyDown("return")){
-					
+					health.value = 1.0f;
 					GameObject sign = Instantiate(signToPlaceUponDeath, gameObject.transform.position+(Vector3.up*3.2f), gameObject.transform.rotation) as GameObject;
 					sign.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = 
 						GameObject.Find ("TypeCanvas").transform.GetChild (1).GetChild(2).GetComponent<Text>().text;
