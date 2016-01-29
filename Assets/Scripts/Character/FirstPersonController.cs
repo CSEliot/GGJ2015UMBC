@@ -21,6 +21,8 @@ public class FirstPersonController : MonoBehaviour {
 	public float maxVelocityChange = 10.0f;
 	public float mouseSensetivity = 1.0f;
 
+    private bool HelpTextToggle = false;
+
 	public float jumpHeight;
 	public float gravity = 9.81f;
 	public float upDownRange;
@@ -35,6 +37,8 @@ public class FirstPersonController : MonoBehaviour {
 
 	private bool runningToggle = false;
 	public bool canCheckForJump;
+
+    private bool gameOver;
 
 	private bool isDead;
 	private int messageEdited; //1 = not caring, 2 = not finished, 3 = finished
@@ -64,6 +68,7 @@ public class FirstPersonController : MonoBehaviour {
 
     public bool isZoomed = false;
 
+    
 
     //cliff control
     Ray rayOrigin;
@@ -80,17 +85,22 @@ public class FirstPersonController : MonoBehaviour {
 	//Anim Controller
 	private Animator animController;
 
+    private bool GamePaused;
+
+
 	//carrying object
 	private bool isCarrying;
 
 	void Awake () {
-		rigidbody.freezeRotation = true;
-		rigidbody.useGravity = false;
+		GetComponent<Rigidbody>().freezeRotation = true;
+		GetComponent<Rigidbody>().useGravity = false;
 	}
 	
 	
 	// Use this for initialization
 	void Start () {
+        GamePaused = true;
+
 		animController = gameObject.transform.GetChild (1).GetComponent<Animator> ();
 		messageEdited = 1;
         canCheckForJump = true;
@@ -102,17 +112,35 @@ public class FirstPersonController : MonoBehaviour {
 		isDead = false;
 		isCarrying = false;
 		health.value = 1.0f;
-		gameObject.rigidbody.isKinematic = false;
+		gameObject.GetComponent<Rigidbody>().isKinematic = false;
 	}
 
 
 
+    void Update()
+    {
+        if (Input.GetButtonDown("Suicide") && isDead == false)
+        {
+            Debug.Log("Controller Death button pressed");
+            killPlayer();
+        }
+
+        if (Input.GetButtonDown("Help"))
+        {
+            ToggleHelpText();
+        }
+
+        //suicide
+        if (Input.GetKeyDown("k") && isDead == false)
+        {
+            killPlayer();
+        }
+
+    }
+
 	void FixedUpdate () {
 
-        if (Input.GetKeyDown("r"))
-        {
-            Application.LoadLevel(Application.loadedLevel);
-        }
+      
 
 		rayOrigin = new Ray(transform.position, transform.up*-1);
 
@@ -130,18 +158,17 @@ public class FirstPersonController : MonoBehaviour {
         }
 		//player's mortality slowly coming to it's inevitable conclusion
 		//210 second life span
-		health.value = health.value - ((0.1f * Time.deltaTime) / 18.0f);//18 = 3mins, 24 = 4mins, 30 = 5mins...
+        if (!GamePaused)
+        {
+		    health.value = health.value - ((0.1f * Time.deltaTime) / 18.0f);//18 = 3mins, 24 = 4mins, 30 = 5mins...
+        }
 		
 		clock = clock + Time.deltaTime;
 
-		if (health.value <= 0.01f) {
-			health.value = 1.0f;
+		if (health.value <= 0.01f && !isDead) {
 			killPlayer();
 		}
-		//suicide
-		if (Input.GetKeyDown("k") && isDead == false) {
-			killPlayer();
-		}
+		
 		if (isDead == false) {		
 			//player rotation
 			//left and right
@@ -169,7 +196,7 @@ public class FirstPersonController : MonoBehaviour {
 				isGrounded = false;
 				canCheckForJump = false;
 
-				rigidbody.velocity = new Vector3 (rigidbody.velocity.x, CalculateJumpVerticalSpeed (), rigidbody.velocity.z);
+				GetComponent<Rigidbody>().velocity = new Vector3 (GetComponent<Rigidbody>().velocity.x, CalculateJumpVerticalSpeed (), GetComponent<Rigidbody>().velocity.z);
 
 				Invoke ("AllowJumpCheck", 0.1f);
 
@@ -194,20 +221,20 @@ public class FirstPersonController : MonoBehaviour {
 				targetVelocity = transform.TransformDirection (targetVelocity);
 				targetVelocity *= moveSpeed;
 				// Apply a force that attempts to reach our target velocity
-				Vector3 velocity = rigidbody.velocity;
+				Vector3 velocity = GetComponent<Rigidbody>().velocity;
 				Vector3 velocityChange = (targetVelocity - velocity);
 
 				velocityChange.x = Mathf.Clamp (velocityChange.x, -maxVelocityChange, maxVelocityChange);
 				velocityChange.z = Mathf.Clamp (velocityChange.z, -maxVelocityChange, maxVelocityChange);
 				velocityChange.y = 0;
 
-				rigidbody.AddForce (velocityChange, ForceMode.VelocityChange);
+				GetComponent<Rigidbody>().AddForce (velocityChange, ForceMode.VelocityChange);
 				
 				// Jump
 				//Manager.say("Jumping action go. Jumps Made: " + totalJumpsMade + " Jumps Allowed: " + totalJumpsAllowed, "eliot");
 			}
 
-			rigidbody.AddForce (new Vector3 (0, -gravity * rigidbody.mass, 0));
+			GetComponent<Rigidbody>().AddForce (new Vector3 (0, -gravity * GetComponent<Rigidbody>().mass, 0));
 			// We apply gravity manually for more tuning control
 		}
 		if (messageEdited != 1) {
@@ -224,6 +251,7 @@ public class FirstPersonController : MonoBehaviour {
 						GameObject.Find ("TypeCanvas").transform.GetChild (1).GetChild(2).GetComponent<Text>().text;
 					messageEdited = 3;
 					GameObject.Find ("TypeCanvas").transform.GetChild (1).GetChild(2).GetComponent<Text>().text = "";
+                    Debug.Log("Message Finished!");
 					GameObject.Find ("TypeCanvas").transform.GetChild (1).gameObject.SetActive (false);
 				}
 				//messageEdited = 3;
@@ -259,13 +287,20 @@ public class FirstPersonController : MonoBehaviour {
 		GameObject.Find ("DeathTracker").GetComponent<DeathTracker> ().increaseDeathCount ();
 		isDead = true;
 		messageEdited = 2;
-		gameObject.rigidbody.isKinematic = true;
-		Screen.lockCursor = false;
+		gameObject.GetComponent<Rigidbody>().isKinematic = true;
+		
+        //Cursor.lockState = CursorLockMode.None;
 		animController.SetInteger ("isState", 3);
 		GameObject.Find ("TypeCanvas").transform.GetChild (1).gameObject.SetActive (true);
         GameObject.Find("TypeCanvas").transform.GetChild(1).GetComponent<InputField>().text = "";
+        Debug.Log("MEssage cleared in killplayer");
 	}
+
 	private void rezPlayer(){
+        GameObject.Find("HelpText").transform.GetChild(0).gameObject.SetActive(true);
+        GameObject.Find("HelpText").transform.GetChild(1).gameObject.SetActive(true);
+        HelpTextToggle = true;
+        GamePaused = true;
 		Instantiate(cloneToCopyUponDeath, 
 		            GameObject.Find("SpawnPoint").transform.position, 
 		            GameObject.Find("SpawnPoint").transform.rotation
@@ -315,6 +350,28 @@ public class FirstPersonController : MonoBehaviour {
 			}
 		}
 	}
+    public bool isGameOver()
+    {
+        return gameOver;
+    }
+
+    public void ToggleHelpText()
+    {
+        if (HelpTextToggle)
+        {
+            GameObject.Find("HelpText").transform.GetChild(0).gameObject.SetActive(false);
+            GameObject.Find("HelpText").transform.GetChild(1).gameObject.SetActive(false);
+            HelpTextToggle = false;
+            GamePaused = false;
+        }
+        else
+        {
+            GameObject.Find("HelpText").transform.GetChild(0).gameObject.SetActive(true);
+            GameObject.Find("HelpText").transform.GetChild(1).gameObject.SetActive(true);
+            HelpTextToggle = true;
+            GamePaused = true;
+        }
+    }
 }
 
 
