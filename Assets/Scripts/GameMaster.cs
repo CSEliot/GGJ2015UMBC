@@ -54,6 +54,8 @@ public class GameMaster : MonoBehaviour {
 		public bool GridArena;
 	}
 
+    private bool HelpTextToggle = false;
+
 	private bool disabledChars;
 	private string magicWinButton = "\\";
 	public GAME_VALUES _M;
@@ -68,11 +70,11 @@ public class GameMaster : MonoBehaviour {
 
 		disabledChars = false;
 		if(Application.isEditor)Save_Values();
-		Screen.lockCursor = true;
+        //Cursor.lockState = CursorLockMode.Locked;
 		Load_Values();
-		gameObject.camera.pixelRect = new Rect(Screen.width/2 - sizeX/2, Screen.height/2 - sizeY/2, sizeX, sizeY);
+		gameObject.GetComponent<Camera>().pixelRect = new Rect(Screen.width/2 - sizeX/2, Screen.height/2 - sizeY/2, sizeX, sizeY);
 		if(_M.miniMapEnabled){
-			gameObject.camera.enabled = true;
+			gameObject.GetComponent<Camera>().enabled = true;
 		}
 	}
 
@@ -126,7 +128,7 @@ public class GameMaster : MonoBehaviour {
 		}
 		if(GameObject.FindGameObjectsWithTag("Player").Length == 1){
 		        gameOver = true;
-				Screen.lockCursor = false;
+                //Cursor.lockState = CursorLockMode.None;
 		}   
 	}
 
@@ -148,9 +150,5 @@ public class GameMaster : MonoBehaviour {
 		_M = (GAME_VALUES) formatter.Deserialize(stream);
 		stream.Close();
 
-	}
-	
-	public bool isGameOver(){
-		return gameOver;
 	}
 }

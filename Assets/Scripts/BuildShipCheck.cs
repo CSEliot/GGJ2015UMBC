@@ -86,7 +86,7 @@ public class BuildShipCheck : MonoBehaviour {
 			newShip = Instantiate(ship, whereToSpawn, Quaternion.Euler(-90f, -180f, -180f)) as GameObject;
 			shipSpawned = true;
 
-			audio.PlayOneShot(buildingShip);
+			GetComponent<AudioSource>().PlayOneShot(buildingShip);
 		}
 	}
 }
